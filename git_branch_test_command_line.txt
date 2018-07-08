@@ -1,0 +1,133 @@
+Last login: Sat Jul  7 23:38:53 on ttys000
+Sams-MacBook-Pro:~ samgorinsky$ pwd
+/Users/samgorinsky
+Sams-MacBook-Pro:~ samgorinsky$ cd documents/workspace/git/dev276x
+Sams-MacBook-Pro:dev276x samgorinsky$ nano readme.md
+Sams-MacBook-Pro:dev276x samgorinsky$ git add readme.md
+Sams-MacBook-Pro:dev276x samgorinsky$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Sams-MacBook-Pro:dev276x samgorinsky$ git add README.md
+Sams-MacBook-Pro:dev276x samgorinsky$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   README.md
+
+Sams-MacBook-Pro:dev276x samgorinsky$ git commit -m "edited readme in nano and checking to see if changes to repo copy can make changes to repo"
+[master 9154ccf] edited readme in nano and checking to see if changes to repo copy can make changes to repo
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Sams-MacBook-Pro:dev276x samgorinsky$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sgorinsky/dev276x
+   188175c..9154ccf  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Sams-MacBook-Pro:dev276x samgorinsky$ cd
+Sams-MacBook-Pro:~ samgorinsky$ cd downloads
+Sams-MacBook-Pro:downloads samgorinsky$ rm -rf *
+Sams-MacBook-Pro:downloads samgorinsky$ cd
+Sams-MacBook-Pro:~ samgorinsky$ cd trash
+-bash: cd: trash: No such file or directory
+Sams-MacBook-Pro:~ samgorinsky$ 
+  [Restored Jul 8, 2018 at 12:09:27 AM]
+Last login: Sun Jul  8 00:00:00 on ttys000
+Sams-MacBook-Pro:~ samgorinsky$ ls
+Applications		Mac			Pictures
+Debugging Tools.R	Makefile		Public
+Desktop			Makefile.pre		algs4
+Documents		Misc			anaconda
+Downloads		Modules			config.log
+Grammar			Movies			config.status
+Hello.txt		Music			nano.save
+IdeaProjects		Objects			pyconfig.h
+Library			Parser
+Sams-MacBook-Pro:~ samgorinsky$ pwd
+/Users/samgorinsky
+Sams-MacBook-Pro:~ samgorinsky$ cd documents/workspace/git
+Sams-MacBook-Pro:git samgorinsky$ cd dev276x
+Sams-MacBook-Pro:dev276x samgorinsky$ ls
+Boolean.class		MazeRunner		RandOddsAndEvens.java
+Boolean.java		MysteryProgram.class	Returns.class
+CaesarCipher.class	MysteryProgram.java	Returns.java
+CaesarCipher.java	OddsAndEvens.class	TripPlanner.class
+ForLoops.class		OddsAndEvens.java	TripPlanner.java
+HelloWorld.class	README.md		forLoops.java
+HelloWorld.java		RandOddsAndEvens.class
+Sams-MacBook-Pro:dev276x samgorinsky$ nano "Branchy testing"
+Sams-MacBook-Pro:dev276x samgorinsky$ ls
+Boolean.class		HelloWorld.java		RandOddsAndEvens.class
+Boolean.java		MazeRunner		RandOddsAndEvens.java
+Branchy testing		MysteryProgram.class	Returns.class
+CaesarCipher.class	MysteryProgram.java	Returns.java
+CaesarCipher.java	OddsAndEvens.class	TripPlanner.class
+ForLoops.class		OddsAndEvens.java	TripPlanner.java
+HelloWorld.class	README.md		forLoops.java
+Sams-MacBook-Pro:dev276x samgorinsky$ add "Branchy Testing"
+-bash: add: command not found
+Sams-MacBook-Pro:dev276x samgorinsky$ git add "Branchy Testing"
+Sams-MacBook-Pro:dev276x samgorinsky$ ls
+Boolean.class		HelloWorld.java		RandOddsAndEvens.class
+Boolean.java		MazeRunner		RandOddsAndEvens.java
+Branchy testing		MysteryProgram.class	Returns.class
+CaesarCipher.class	MysteryProgram.java	Returns.java
+CaesarCipher.java	OddsAndEvens.class	TripPlanner.class
+ForLoops.class		OddsAndEvens.java	TripPlanner.java
+HelloWorld.class	README.md		forLoops.java
+Sams-MacBook-Pro:dev276x samgorinsky$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Branchy testing
+
+nothing added to commit but untracked files present (use "git add" to track)
+Sams-MacBook-Pro:dev276x samgorinsky$ git add "Branchy testing"
+Sams-MacBook-Pro:dev276x samgorinsky$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Branchy testing
+
+Sams-MacBook-Pro:dev276x samgorinsky$ git commit -m "testing the new add to branchy"
+[master ebe878c] testing the new add to branchy
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Branchy testing
+Sams-MacBook-Pro:dev276x samgorinsky$ git push -u origin branchy
+error: src refspec branchy does not match any.
+error: failed to push some refs to 'https://github.com/sgorinsky/dev276x'
+Sams-MacBook-Pro:dev276x samgorinsky$ git push -u origin https://github.com/sgorinsky/dev276x branchy
+fatal: remote part of refspec is not a valid name in https://github.com/sgorinsky/dev276x
+Sams-MacBook-Pro:dev276x samgorinsky$ git checkout -b branchy
+Switched to a new branch 'branchy'
+Sams-MacBook-Pro:dev276x samgorinsky$ git push -u origin branchy
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 301 bytes | 301.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sgorinsky/dev276x
+   9154ccf..ebe878c  branchy -> branchy
+Branch 'branchy' set up to track remote branch 'branchy' from 'origin'.
+Sams-MacBook-Pro:dev276x samgorinsky$ 
