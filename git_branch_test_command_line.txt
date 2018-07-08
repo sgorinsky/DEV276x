@@ -1,7 +1,3 @@
-Last login: Sat Jul  7 23:38:53 on ttys000
-Sams-MacBook-Pro:~ samgorinsky$ pwd
-/Users/samgorinsky
-Sams-MacBook-Pro:~ samgorinsky$ cd documents/workspace/git/dev276x
 Sams-MacBook-Pro:dev276x samgorinsky$ nano readme.md
 Sams-MacBook-Pro:dev276x samgorinsky$ git add readme.md
 Sams-MacBook-Pro:dev276x samgorinsky$ git status
@@ -118,7 +114,7 @@ error: src refspec branchy does not match any.
 error: failed to push some refs to 'https://github.com/sgorinsky/dev276x'
 Sams-MacBook-Pro:dev276x samgorinsky$ git push -u origin https://github.com/sgorinsky/dev276x branchy
 fatal: remote part of refspec is not a valid name in https://github.com/sgorinsky/dev276x
-Sams-MacBook-Pro:dev276x samgorinsky$ git checkout -b branchy
+Sams-MacBook-Pro:dev276x samgorinsky$ git checkout -b branchy #where I moved from master to branch
 Switched to a new branch 'branchy'
 Sams-MacBook-Pro:dev276x samgorinsky$ git push -u origin branchy
 Counting objects: 3, done.
